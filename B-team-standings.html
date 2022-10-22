@@ -4,7 +4,7 @@
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/animation.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/w3.css">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link rel="icon" href="./assets/maintmaster.png">
 </head>
 
@@ -12,7 +12,7 @@
     <head>
 	<title>
 		Supercupen |
-			Home
+			team B
 	</title>
 </head>
 
@@ -28,7 +28,7 @@
 
 
 		<h3 class="w3-hide-large navTitle bold" style="display:block;">
-			 - 
+			team - B
 			<br><span id="countdown"></span>
 		</h3>
 
@@ -47,7 +47,7 @@
 			<button class="w3-button">Teammästerskap</button>
 			<div class="w3-dropdown-content w3-bar-block w3-card-4 w3-hide-small w3-hide-medium">
 				<a href="./A-team-standings.html" class="w3-bar-item w3-button ">A</a>
-				<a href="./B-team-standings.html" class="w3-bar-item w3-button ">B</a>
+				<a href="./B-team-standings.html" class="w3-bar-item w3-button active">B</a>
 				<a href="./C-team-standings.html" class="w3-bar-item w3-button ">C</a>
 				<a href="./overall-team-standings.html" class="w3-bar-item w3-button ">overall</a>
 			</div>
@@ -68,11 +68,16 @@
             <a href="./C-driver-standings.html" class="w3-bar-item w3-button ">Poängställning - C</a>
             <a href="./overall-driver-standings.html" class="w3-bar-item w3-button ">Poängställning - overall</a>
             <a href="./A-team-standings.html" class="w3-bar-item w3-button ">Teammästerskap - A</a>
-            <a href="./B-team-standings.html" class="w3-bar-item w3-button ">Teammästerskap - B</a>
+            <a href="./B-team-standings.html" class="w3-bar-item w3-button active">Teammästerskap - B</a>
             <a href="./C-team-standings.html" class="w3-bar-item w3-button ">Teammästerskap - C</a>
             <a href="./overall-team-standings.html" class="w3-bar-item w3-button ">Teammästerskap - overall</a>
 	</div>
 
+	<div class="w3-bar w3-light-grey secondaryNav">
+			<a href="./B-0-driver-results.html">
+				<img src="./assets/country-flags/swe.png" />
+			</a>
+	</div>
 </div>
 <script>
 	// Set the date we're counting down to
@@ -110,83 +115,120 @@
 
     <div id="container">
         <div id="flexContainer">
-            <div class="flexBox" style="margin:5px;width: 60%; min-width: 700px;">
-                <div class="w3-card-4">
-
-                    <header class="w3-container w3-lime">
-                        <h1>Välkommen till MaintMaster Säsong 5</h1>
-                    </header>
-
-                    <div class="w3-container w3-light-grey">
-                        <p>Just nu pågår Säsong 5 för fullt. Säsong 6 startar v.42</p>
-
+            <div class="flexBox">
+                <div style="margin-bottom: 1em;" class="w3-hide-medium w3-hide-small">
+                    <div class="logo" style="display:flex;">
+                        <img src="./assets/maintmaster.png" />
+                        <h2 style="margin-left:1em;">Supercupen - B Teammästerskap</h2>
                     </div>
                 </div>
 
-                <!--
-                <div class="w3-card-4">
+                <table id="tableDrivers">
+                    <thead>
+                        <tr>
+                            <th>Pos</th>
+                            <th></th>
+                            <th>Team</th>
+                            <th><img src="./assets/country-flags/swe.png"  alt="swe"/></th>
+                            <th>Poäng</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>1</td>
+                            <td>
+                                <span class="neutral">=</span>
+                            </td>
+                                <td class="text-left bold">Castrol Team Sweden</td>
+                            
+                            <td>
+                                66
+                            </td>
+                            
+                            <td class="bold">66</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>2</td>
+                            <td>
+                                <span class="neutral">=</span>
+                            </td>
+                                <td class="text-left bold">Castrol Rally Team</td>
+                            
+                            <td>
+                                48
+                            </td>
+                            
+                            <td class="bold">48</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>3</td>
+                            <td>
+                                <span class="neutral">=</span>
+                            </td>
+                                <td class="text-left bold">Wermland Rally Team</td>
+                            
+                            <td>
+                                47
+                            </td>
+                            
+                            <td class="bold">47</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>4</td>
+                            <td>
+                                <span class="neutral">=</span>
+                            </td>
+                                <td class="text-left bold">Team Alfa</td>
+                            
+                            <td>
+                                0
+                            </td>
+                            
+                            <td class="bold">0</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>4</td>
+                            <td>
+                                <span class="neutral">=</span>
+                            </td>
+                                <td class="text-left bold">Kapow Racing Finland</td>
+                            
+                            <td>
+                                0
+                            </td>
+                            
+                            <td class="bold">0</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>4</td>
+                            <td>
+                                <span class="neutral">=</span>
+                            </td>
+                                <td class="text-left bold">Kapow Racing Sverige</td>
+                            
+                            <td>
+                                0
+                            </td>
+                            
+                            <td class="bold">0</td>
+                        </tr>
+                        
+                    </tbody>
 
-                    <header class="w3-container w3-blue">
-                        <h1>Season 11 Calendar</h1>
-                    </header>
-
-                    <div class="w3-container w3-light-grey" style="font-weight: bold;">
-                        <img style="max-width:100%; margin:auto; display:block;" src="./assets/S10_calendar.png" />
-                    </div>
+                </table>
+                <div style="margin:0 auto; text-align:center;">
+                    <p>Senast uppdaterad vid: 2022-10-22T07:53:18Z</p>
                 </div>
-                -->
-
-                <div class="w3-card-4">
-
-                    <header class="w3-container w3-lime">
-                        <h1>Sidoserier</h1>
-                    </header>
-
-                    <div class="w3-container w3-light-grey">
-                        <p><strong>Supportserien</strong></p>
-                        <p>I supportserien körs i nuvarande säsong H2 FWD och H2 RWD</p>
-                    </div>
-
-                    <div class="w3-container w3-light-grey">
-                        <p><strong>MaintMaster inofficiellt SM och VOC</strong></p>
-                        <p>Inga bilbyten under pågående deltävling – man kör hela deltävlingen i samma bil, det omfattar både etappen på lördagen och etappen på söndagen. Mellan deltävlingarna får man byta bil och även klass. Byter man klass får man inte ta med sig poängen från föregående bilklass.</p>
-                        <p>I MSRD VOC DATSUN så får endast Datsun köras och med diffarna på 0.</p>
-                    </div>
-                </div>
-
             </div>
-            <div class="flexBox" style="margin:5px;">
-                <h2>Regelbok</h2>
-                <h3>Säsong 5</h3>
-                <ul>
-                    <li><a
-                            href="https://docs.google.com/document/d/11E3gLv9X5_0Ti5yRsWTbVamPFnyURZ_M">Regelbok</a>
-                    </li>
-                </ul>
-                <h2>Resultat</h2>
-                <ul>
-                    <li>
-                        <a href="./supportserien/index.html">Supportserien</a>
-                    </li>
-                    <li>
-                        <a href="./Inofficiellt-sm-voc/index.html">Inoff SM & VOC</a>
-                    </li>
-                </ul>
-
-                <h2>Andra länkar</h2>
-                <ul>
-                    <li>
-                        <a href="https://junior-rally-championship.fandom.com/wiki/Junior_Rally_Championship_Wiki">Wiki</a>
-                    </li>
-                </ul>
-            </div>
-
         </div>
     </div>
 
-    <!--
-        DROPDOWN
-    -->
     <script>
         function openNav() {
             var x = document.getElementById("mobileNav");
