@@ -4,15 +4,15 @@
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/animation.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/w3.css">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link rel="icon" href="./assets/maintmaster.png">
 </head>
 
 <body style="background-image: linear-gradient(#00b1b1, #39d7d7); background-size: cover; background-repeat: no-repeat; background-attachment: fixed;">
-    <head>
+<head>
 	<title>
 		Supercupen |
-			Home
+			driver overall
 	</title>
 </head>
 
@@ -28,7 +28,7 @@
 
 
 		<h3 class="w3-hide-large navTitle bold" style="display:block;">
-			 - 
+			driver - overall
 			<br><span id="countdown"></span>
 		</h3>
 
@@ -39,7 +39,7 @@
 				<a href="./A-driver-standings.html" class="w3-bar-item w3-button ">A</a>
 				<a href="./B-driver-standings.html" class="w3-bar-item w3-button ">B</a>
 				<a href="./C-driver-standings.html" class="w3-bar-item w3-button ">C</a>
-				<a href="./overall-driver-standings.html" class="w3-bar-item w3-button ">overall</a>
+				<a href="./overall-driver-standings.html" class="w3-bar-item w3-button active">overall</a>
 			</div>
 		</div>
 
@@ -66,13 +66,18 @@
             <a href="./A-driver-standings.html" class="w3-bar-item w3-button ">Poängställning - A</a>
             <a href="./B-driver-standings.html" class="w3-bar-item w3-button ">Poängställning - B</a>
             <a href="./C-driver-standings.html" class="w3-bar-item w3-button ">Poängställning - C</a>
-            <a href="./overall-driver-standings.html" class="w3-bar-item w3-button ">Poängställning - overall</a>
+            <a href="./overall-driver-standings.html" class="w3-bar-item w3-button active">Poängställning - overall</a>
             <a href="./A-team-standings.html" class="w3-bar-item w3-button ">Teammästerskap - A</a>
             <a href="./B-team-standings.html" class="w3-bar-item w3-button ">Teammästerskap - B</a>
             <a href="./C-team-standings.html" class="w3-bar-item w3-button ">Teammästerskap - C</a>
             <a href="./overall-team-standings.html" class="w3-bar-item w3-button ">Teammästerskap - overall</a>
 	</div>
 
+	<div class="w3-bar w3-light-grey secondaryNav">
+			<a href="./overall-0-driver-results.html">
+				<img src="./assets/country-flags/swe.png" />
+			</a>
+	</div>
 </div>
 <script>
 	// Set the date we're counting down to
@@ -108,95 +113,561 @@
 	}, 1000);
 </script>
 
-    <div id="container">
-        <div id="flexContainer">
-            <div class="flexBox" style="margin:5px;width: 60%; min-width: 700px;">
-                <div class="w3-card-4">
-
-                    <header class="w3-container w3-lime">
-                        <h1>Välkommen till MaintMaster Säsong 5</h1>
-                    </header>
-
-                    <div class="w3-container w3-light-grey">
-                        <p>Just nu pågår Säsong 5 för fullt. Säsong 6 startar v.42</p>
-
-                    </div>
+<div id="container">
+    <div id="flexContainer">
+        <div class="flexBox">
+            <div style="margin-bottom: 1em;" class="w3-hide-medium w3-hide-small">
+                <div class="logo" style="display:flex;">
+                    <img src="./assets/maintmaster.png" />
+                    <h2 style="margin-left:1em;">Supercupen - Overall Sweden Resultat</h2>
                 </div>
-
-                <!--
-                <div class="w3-card-4">
-
-                    <header class="w3-container w3-blue">
-                        <h1>Season 11 Calendar</h1>
-                    </header>
-
-                    <div class="w3-container w3-light-grey" style="font-weight: bold;">
-                        <img style="max-width:100%; margin:auto; display:block;" src="./assets/S10_calendar.png" />
-                    </div>
-                </div>
-                -->
-
-                <div class="w3-card-4">
-
-                    <header class="w3-container w3-lime">
-                        <h1>Sidoserier</h1>
-                    </header>
-
-                    <div class="w3-container w3-light-grey">
-                        <p><strong>Supportserien</strong></p>
-                        <p>I supportserien körs i nuvarande säsong H2 FWD och H2 RWD</p>
-                    </div>
-
-                    <div class="w3-container w3-light-grey">
-                        <p><strong>MaintMaster inofficiellt SM och VOC</strong></p>
-                        <p>Inga bilbyten under pågående deltävling – man kör hela deltävlingen i samma bil, det omfattar både etappen på lördagen och etappen på söndagen. Mellan deltävlingarna får man byta bil och även klass. Byter man klass får man inte ta med sig poängen från föregående bilklass.</p>
-                        <p>I MSRD VOC DATSUN så får endast Datsun köras och med diffarna på 0.</p>
-                    </div>
-                </div>
-
-            </div>
-            <div class="flexBox" style="margin:5px;">
-                <h2>Regelbok</h2>
-                <h3>Säsong 5</h3>
-                <ul>
-                    <li><a
-                            href="https://docs.google.com/document/d/11E3gLv9X5_0Ti5yRsWTbVamPFnyURZ_M">Regelbok</a>
-                    </li>
-                </ul>
-                <h2>Resultat</h2>
-                <ul>
-                    <li>
-                        <a href="./supportserien/index.html">Supportserien</a>
-                    </li>
-                    <li>
-                        <a href="./Inofficiellt-sm-voc/index.html">Inoff SM & VOC</a>
-                    </li>
-                </ul>
-
-                <h2>Andra länkar</h2>
-                <ul>
-                    <li>
-                        <a href="https://junior-rally-championship.fandom.com/wiki/Junior_Rally_Championship_Wiki">Wiki</a>
-                    </li>
-                </ul>
             </div>
 
+            <table id="tableDrivers">
+                <thead>
+                <tr>
+                    <th>Pos</th>
+                    <th>Nat</th>
+                    <th>Förare</th>
+                        <th>Div</th>
+                        <th>Bil</th>
+                    <td>PS</td>
+                    <td>Diff</td>
+                    <td>Total</td>
+                    <td>Diff</td>
+                        <td>PS Poäng</td>
+                    <td>Poäng</td>
+                    <td>Totalpoäng</td>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>
+                            <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
+                        </td>
+                        <td class="text-left bold">Tomas Nordins</td>
+                            <td>A</td>
+                                <td>
+                                    <img src="./assets/cars/BMW.png" style="max-width:2em; max-height:2em;" alt="BMW" title="BMW"/>
+                                </td>
+                        <td>05:37.153</td>
+                        <td>--</td>
+                        <td>31:10.170</td>
+                        <td>--</td>
+                            <td>5</td>
+                        <td>30</td>
+                        <td class="bold">35</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>
+                            <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
+                        </td>
+                        <td class="text-left bold">Thomas Dahn</td>
+                            <td>A</td>
+                                <td>
+                                    <img src="./assets/cars/peugot.png" style="max-width:2em; max-height:2em;" alt="peugot" title="peugot"/>
+                                </td>
+                        <td>05:49.402</td>
+                        <td>+00:00:12.249</td>
+                        <td>31:23.050</td>
+                        <td>+00:00:12.880</td>
+                            <td>4</td>
+                        <td>27</td>
+                        <td class="bold">31</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>
+                            <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
+                        </td>
+                        <td class="text-left bold">Oskar Norlin</td>
+                            <td>A</td>
+                                <td>
+                                    <img src="./assets/cars/BMW.png" style="max-width:2em; max-height:2em;" alt="BMW" title="BMW"/>
+                                </td>
+                        <td>05:51.119</td>
+                        <td>+00:00:13.966</td>
+                        <td>31:38.973</td>
+                        <td>+00:00:28.803</td>
+                            <td>2</td>
+                        <td>25</td>
+                        <td class="bold">27</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>
+                            <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
+                        </td>
+                        <td class="text-left bold">Tony Bergqvist</td>
+                            <td>A</td>
+                                <td>
+                                    <img src="./assets/cars/aston.png" style="max-width:2em; max-height:2em;" alt="aston" title="aston"/>
+                                </td>
+                        <td>05:50.769</td>
+                        <td>+00:00:13.616</td>
+                        <td>31:44.542</td>
+                        <td>+00:00:34.372</td>
+                            <td>3</td>
+                        <td>24</td>
+                        <td class="bold">27</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>
+                            <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
+                        </td>
+                        <td class="text-left bold">Lars Wiik</td>
+                            <td>A</td>
+                                <td>
+                                    <img src="./assets/cars/peugot.png" style="max-width:2em; max-height:2em;" alt="peugot" title="peugot"/>
+                                </td>
+                        <td>05:58.435</td>
+                        <td>+00:00:21.282</td>
+                        <td>32:35.399</td>
+                        <td>+00:01:25.229</td>
+                            <td>1</td>
+                        <td>23</td>
+                        <td class="bold">24</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>
+                            <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
+                        </td>
+                        <td class="text-left bold">Anders Olsson</td>
+                            <td>A</td>
+                                <td>
+                                    <img src="./assets/cars/BMW.png" style="max-width:2em; max-height:2em;" alt="BMW" title="BMW"/>
+                                </td>
+                        <td>06:11.818</td>
+                        <td>+00:00:34.665</td>
+                        <td>32:44.473</td>
+                        <td>+00:01:34.303</td>
+                            <td></td>
+                        <td>21</td>
+                        <td class="bold">21</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>
+                            <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
+                        </td>
+                        <td class="text-left bold">Tommie Lindberg</td>
+                            <td>A</td>
+                                <td>
+                                    <img src="./assets/cars/peugot.png" style="max-width:2em; max-height:2em;" alt="peugot" title="peugot"/>
+                                </td>
+                        <td>06:20.385</td>
+                        <td>+00:00:43.232</td>
+                        <td>32:52.334</td>
+                        <td>+00:01:42.164</td>
+                            <td></td>
+                        <td>19</td>
+                        <td class="bold">19</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>
+                            <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
+                        </td>
+                        <td class="text-left bold">Stefan Magnusson</td>
+                            <td>B</td>
+                                <td>
+                                    <img src="./assets/cars/seat.png" style="max-width:2em; max-height:2em;" alt="seat" title="seat"/>
+                                </td>
+                        <td>06:13.501</td>
+                        <td>+00:00:36.348</td>
+                        <td>33:29.378</td>
+                        <td>+00:02:19.208</td>
+                            <td>4</td>
+                        <td>30</td>
+                        <td class="bold">34</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>
+                            <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
+                        </td>
+                        <td class="text-left bold">Martin Zirnsack</td>
+                            <td>B</td>
+                                <td>
+                                    <img src="./assets/cars/volkswagen.png" style="max-width:2em; max-height:2em;" alt="volkswagen" title="volkswagen"/>
+                                </td>
+                        <td>06:13.451</td>
+                        <td>+00:00:36.298</td>
+                        <td>33:39.813</td>
+                        <td>+00:02:29.643</td>
+                            <td>5</td>
+                        <td>27</td>
+                        <td class="bold">32</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>
+                            <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
+                        </td>
+                        <td class="text-left bold">Fredrik Eklöf</td>
+                            <td>B</td>
+                                <td>
+                                    <img src="./assets/cars/volkswagen.png" style="max-width:2em; max-height:2em;" alt="volkswagen" title="volkswagen"/>
+                                </td>
+                        <td>06:17.318</td>
+                        <td>+00:00:40.165</td>
+                        <td>33:42.470</td>
+                        <td>+00:02:32.300</td>
+                            <td>3</td>
+                        <td>25</td>
+                        <td class="bold">28</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>
+                            <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
+                        </td>
+                        <td class="text-left bold">Hans-Daniel Steiner</td>
+                            <td>C</td>
+                                <td>
+                                    <img src="./assets/cars/volkswagen.png" style="max-width:2em; max-height:2em;" alt="volkswagen" title="volkswagen"/>
+                                </td>
+                        <td>06:10.451</td>
+                        <td>+00:00:33.298</td>
+                        <td>34:00.863</td>
+                        <td>+00:02:50.693</td>
+                            <td>5</td>
+                        <td>30</td>
+                        <td class="bold">35</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>
+                            <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
+                        </td>
+                        <td class="text-left bold">Tomas Eriksson</td>
+                            <td>B</td>
+                                <td>
+                                    <img src="./assets/cars/seat.png" style="max-width:2em; max-height:2em;" alt="seat" title="seat"/>
+                                </td>
+                        <td>06:20.518</td>
+                        <td>+00:00:43.365</td>
+                        <td>34:02.795</td>
+                        <td>+00:02:52.625</td>
+                            <td>1</td>
+                        <td>24</td>
+                        <td class="bold">25</td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>
+                            <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
+                        </td>
+                        <td class="text-left bold">Staffan Magnusson</td>
+                            <td>B</td>
+                                <td>
+                                    <img src="./assets/cars/volkswagen.png" style="max-width:2em; max-height:2em;" alt="volkswagen" title="volkswagen"/>
+                                </td>
+                        <td>06:22.951</td>
+                        <td>+00:00:45.798</td>
+                        <td>34:10.736</td>
+                        <td>+00:03:00.566</td>
+                            <td></td>
+                        <td>23</td>
+                        <td class="bold">23</td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td>
+                            <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
+                        </td>
+                        <td class="text-left bold">Fredrik Fält</td>
+                            <td>C</td>
+                                <td>
+                                    <img src="./assets/cars/volkswagen.png" style="max-width:2em; max-height:2em;" alt="volkswagen" title="volkswagen"/>
+                                </td>
+                        <td>06:17.234</td>
+                        <td>+00:00:40.081</td>
+                        <td>34:17.718</td>
+                        <td>+00:03:07.548</td>
+                            <td>4</td>
+                        <td>27</td>
+                        <td class="bold">31</td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td>
+                            <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
+                        </td>
+                        <td class="text-left bold">Johan Jansson</td>
+                            <td>A</td>
+                                <td>
+                                    <img src="./assets/cars/seat.png" style="max-width:2em; max-height:2em;" alt="seat" title="seat"/>
+                                </td>
+                        <td>06:31.917</td>
+                        <td>+00:00:54.764</td>
+                        <td>34:23.361</td>
+                        <td>+00:03:13.191</td>
+                            <td></td>
+                        <td>17</td>
+                        <td class="bold">17</td>
+                    </tr>
+                    <tr>
+                        <td>16</td>
+                        <td>
+                            <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
+                        </td>
+                        <td class="text-left bold">Björn Hvit</td>
+                            <td>B</td>
+                                <td>
+                                    <img src="./assets/cars/volkswagen.png" style="max-width:2em; max-height:2em;" alt="volkswagen" title="volkswagen"/>
+                                </td>
+                        <td>06:18.634</td>
+                        <td>+00:00:41.481</td>
+                        <td>34:27.829</td>
+                        <td>+00:03:17.659</td>
+                            <td>2</td>
+                        <td>21</td>
+                        <td class="bold">23</td>
+                    </tr>
+                    <tr>
+                        <td>17</td>
+                        <td>
+                            <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
+                        </td>
+                        <td class="text-left bold">Anders Hillerström</td>
+                            <td>C</td>
+                                <td>
+                                    <img src="./assets/cars/volkswagen.png" style="max-width:2em; max-height:2em;" alt="volkswagen" title="volkswagen"/>
+                                </td>
+                        <td>06:21.018</td>
+                        <td>+00:00:43.865</td>
+                        <td>35:18.088</td>
+                        <td>+00:04:07.918</td>
+                            <td>3</td>
+                        <td>25</td>
+                        <td class="bold">28</td>
+                    </tr>
+                    <tr>
+                        <td>18</td>
+                        <td>
+                            <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
+                        </td>
+                        <td class="text-left bold">Sebastian Asplund</td>
+                            <td>C</td>
+                                <td>
+                                    <img src="./assets/cars/volkswagen.png" style="max-width:2em; max-height:2em;" alt="volkswagen" title="volkswagen"/>
+                                </td>
+                        <td>06:46.550</td>
+                        <td>+00:01:09.397</td>
+                        <td>35:33.305</td>
+                        <td>+00:04:23.135</td>
+                            <td>1</td>
+                        <td>24</td>
+                        <td class="bold">25</td>
+                    </tr>
+                    <tr>
+                        <td>19</td>
+                        <td>
+                            <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
+                        </td>
+                        <td class="text-left bold">Tom Pettersson</td>
+                            <td>C</td>
+                                <td>
+                                    <img src="./assets/cars/BMW.png" style="max-width:2em; max-height:2em;" alt="BMW" title="BMW"/>
+                                </td>
+                        <td>06:50.066</td>
+                        <td>+00:01:12.913</td>
+                        <td>35:47.466</td>
+                        <td>+00:04:37.296</td>
+                            <td></td>
+                        <td>23</td>
+                        <td class="bold">23</td>
+                    </tr>
+                    <tr>
+                        <td>20</td>
+                        <td>
+                            <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
+                        </td>
+                        <td class="text-left bold">Leif Backlund</td>
+                            <td>C</td>
+                                <td>
+                                    <img src="./assets/cars/seat.png" style="max-width:2em; max-height:2em;" alt="seat" title="seat"/>
+                                </td>
+                        <td>06:23.234</td>
+                        <td>+00:00:46.081</td>
+                        <td>35:57.138</td>
+                        <td>+00:04:46.968</td>
+                            <td>2</td>
+                        <td>21</td>
+                        <td class="bold">23</td>
+                    </tr>
+                    <tr>
+                        <td>21</td>
+                        <td>
+                            <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
+                        </td>
+                        <td class="text-left bold">Jonas Lund</td>
+                            <td>B</td>
+                                <td>
+                                    <img src="./assets/cars/porsche.png" style="max-width:2em; max-height:2em;" alt="porsche" title="porsche"/>
+                                </td>
+                        <td>07:18.066</td>
+                        <td>+00:01:40.913</td>
+                        <td>37:32.806</td>
+                        <td>+00:06:22.636</td>
+                            <td></td>
+                        <td>19</td>
+                        <td class="bold">19</td>
+                    </tr>
+                    <tr>
+                        <td>22</td>
+                        <td>
+                            <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
+                        </td>
+                        <td class="text-left bold">Casper Nilsson</td>
+                            <td>C</td>
+                                <td>
+                                    <img src="./assets/cars/volkswagen.png" style="max-width:2em; max-height:2em;" alt="volkswagen" title="volkswagen"/>
+                                </td>
+                        <td>08:16.232</td>
+                        <td>+00:02:39.079</td>
+                        <td>37:59.796</td>
+                        <td>+00:06:49.626</td>
+                            <td></td>
+                        <td>19</td>
+                        <td class="bold">19</td>
+                    </tr>
+                    <tr>
+                        <td>23</td>
+                        <td>
+                            <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
+                        </td>
+                        <td class="text-left bold">Magnus Carlsson</td>
+                            <td>B</td>
+                                <td>
+                                    <img src="./assets/cars/BMW.png" style="max-width:2em; max-height:2em;" alt="BMW" title="BMW"/>
+                                </td>
+                        <td>30:00.000</td>
+                        <td>+00:24:22.847</td>
+                        <td>01:43:38.250</td>
+                        <td>+01:12:28.080</td>
+                            <td></td>
+                        <td></td>
+                        <td class="bold">DNF</td>
+                    </tr>
+                    <tr>
+                        <td>24</td>
+                        <td>
+                            <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
+                        </td>
+                        <td class="text-left bold">Peter Dahlström</td>
+                            <td>B</td>
+                                <td>
+                                    <img src="./assets/cars/BMW.png" style="max-width:2em; max-height:2em;" alt="BMW" title="BMW"/>
+                                </td>
+                        <td>30:00.000</td>
+                        <td>+00:24:22.847</td>
+                        <td>02:07:05.766</td>
+                        <td>+01:35:55.596</td>
+                            <td></td>
+                        <td></td>
+                        <td class="bold">DNF</td>
+                    </tr>
+                    <tr>
+                        <td>25</td>
+                        <td>
+                            <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
+                        </td>
+                        <td class="text-left bold">Peter Danielsson</td>
+                            <td>A</td>
+                                <td>
+                                    <img src="./assets/cars/BMW.png" style="max-width:2em; max-height:2em;" alt="BMW" title="BMW"/>
+                                </td>
+                        <td>30:00.000</td>
+                        <td>+00:24:22.847</td>
+                        <td>02:07:18.032</td>
+                        <td>+01:36:07.862</td>
+                            <td></td>
+                        <td></td>
+                        <td class="bold">DNF</td>
+                    </tr>
+                    <tr>
+                        <td>26</td>
+                        <td>
+                            <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
+                        </td>
+                        <td class="text-left bold">Ludvig Gabrielsson</td>
+                            <td>A</td>
+                                <td>
+                                    <img src="./assets/cars/BMW.png" style="max-width:2em; max-height:2em;" alt="BMW" title="BMW"/>
+                                </td>
+                        <td>15:00:00.000</td>
+                        <td>N/A</td>
+                        <td>23:59:59.000</td>
+                        <td>N/A</td>
+                            <td></td>
+                        <td></td>
+                        <td class="bold"></td>
+                    </tr>
+                    <tr>
+                        <td>27</td>
+                        <td>
+                            <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
+                        </td>
+                        <td class="text-left bold">Johan Olsson</td>
+                            <td>A</td>
+                                <td>
+                                    <img src="./assets/cars/BMW.png" style="max-width:2em; max-height:2em;" alt="BMW" title="BMW"/>
+                                </td>
+                        <td>15:00:00.000</td>
+                        <td>N/A</td>
+                        <td>23:59:59.000</td>
+                        <td>N/A</td>
+                            <td></td>
+                        <td></td>
+                        <td class="bold"></td>
+                    </tr>
+                    <tr>
+                        <td>28</td>
+                        <td>
+                            <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
+                        </td>
+                        <td class="text-left bold">Marko Nevalainen</td>
+                            <td>B</td>
+                                <td>
+                                    <img src="./assets/cars/ford.png" style="max-width:2em; max-height:2em;" alt="ford" title="ford"/>
+                                </td>
+                        <td>15:00:00.000</td>
+                        <td>N/A</td>
+                        <td>23:59:59.000</td>
+                        <td>N/A</td>
+                            <td></td>
+                        <td></td>
+                        <td class="bold"></td>
+                    </tr>
+                </tbody>
+
+            </table>
+            <div style="margin:0 auto; text-align:center;">
+                <p>Senast uppdaterad vid: 2022-10-22T07:57:20Z</p>
+            </div>
         </div>
     </div>
+</div>
 
-    <!--
-        DROPDOWN
-    -->
-    <script>
-        function openNav() {
-            var x = document.getElementById("mobileNav");
-            if (x.className.indexOf("w3-show") == -1) {
-                x.className += " w3-show";
-            } else {
-                x.className = x.className.replace(" w3-show", "");
-            }
+<!--
+    DROPDOWN
+-->
+<script>
+    function openNav() {
+        var x = document.getElementById("mobileNav");
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else {
+            x.className = x.className.replace(" w3-show", "");
         }
-    </script>
+    }
+</script>
 </body>
 
 </html>
