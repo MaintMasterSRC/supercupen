@@ -18,20 +18,21 @@
 
 <div class="w3-top">
 	<div class="w3-bar w3-black" style="text-align:center;">
-		<div class="logo">
-			<a href="/index.html">
-				<img src="./assets/maintmaster.png">
-			</a>
-		</div>
-		<a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large" style="font-size:3em;"
-			onclick="openNav()">&#9776;</a>
-
-
-		<h3 class="w3-hide-large navTitle bold" style="display:block;">
-			team - B
-			<br><span id="countdown"></span>
-		</h3>
-
+        <div class="logo w3-dropdown-hover w3-hide-small w3-hide-medium" style="background-color: #0000">
+            <a href="/index.html">
+                <img src="./assets/maintmaster.png">
+            </a>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-hide-small w3-hide-medium">
+                <span class="w3-bar-item">---series---</span>
+                    <a href="/undefined" class="w3-bar-item w3-button ">MaintMaster</a>
+                    <a href="/enhetscupen" class="w3-bar-item w3-button ">Enhetscupen</a>
+                <span class="w3-bar-item">---historical---</span>
+                    <a href="/season5" class="w3-bar-item w3-button ">MaintMaster s5</a>
+                    <a href="/season5/supportserien" class="w3-bar-item w3-button ">Supportserien s5</a>
+                    <a href="/season5/enhetscupen" class="w3-bar-item w3-button ">Enhetscupen s5</a>
+                    <a href="/season5/supercupen" class="w3-bar-item w3-button ">Supercupen s5</a>
+            </div>
+        </div>
 
 		<div class="w3-dropdown-hover w3-hide-small w3-hide-medium">
 			<button class="w3-button">Poängställning</button>
@@ -52,7 +53,7 @@
 				<a href="./overall-team-standings.html" class="w3-bar-item w3-button ">overall</a>
 			</div>
 		</div>
-		
+
 
 		<div class="w3-bar-item w3-right w3-hide-small w3-hide-medium">
 			<div class="logo">
@@ -60,6 +61,20 @@
 			</div>
 			<span id="countdown2"></span>
 		</div>
+
+        <!-- mobile stuff -->
+        <a href="javascript:void(0)" class="logo w3-left w3-hide-large" style="font-size:3em;" onclick="openSeriesMobileNav()">
+            <img src="./assets/maintmaster.png" style="max-height: 1em;margin: 0.1em;border: 1px solid darkgray">
+        </a>
+
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large" style="font-size:3em;" onclick="openMobileNav()">&#9776;
+        </a>
+
+        <h3 class="w3-hide-large navTitle bold" style="display:block;">
+            team - B
+            <br><span id="countdown"></span>
+        </h3>
+
 	</div>
 
 	<div id="mobileNav" class="w3-bar-block w3-black w3-hide w3-hide-large" style="overflow-y:scroll;max-height:95vh;">
@@ -71,6 +86,17 @@
             <a href="./B-team-standings.html" class="w3-bar-item w3-button active">Teammästerskap - B</a>
             <a href="./C-team-standings.html" class="w3-bar-item w3-button ">Teammästerskap - C</a>
             <a href="./overall-team-standings.html" class="w3-bar-item w3-button ">Teammästerskap - overall</a>
+	</div>
+
+	<div id="seriesMobileNav" class="w3-bar-block w3-black w3-hide w3-hide-large" style="overflow-y:scroll;max-height:95vh;">
+            <span class="w3-bar-item">---series---</span>
+                <a href="/undefined" class="w3-bar-item w3-button ">MaintMaster</a>
+                <a href="/enhetscupen" class="w3-bar-item w3-button ">Enhetscupen</a>
+            <span class="w3-bar-item">---historical---</span>
+                <a href="/season5" class="w3-bar-item w3-button ">MaintMaster s5</a>
+                <a href="/season5/supportserien" class="w3-bar-item w3-button ">Supportserien s5</a>
+                <a href="/season5/enhetscupen" class="w3-bar-item w3-button ">Enhetscupen s5</a>
+                <a href="/season5/supercupen" class="w3-bar-item w3-button ">Supercupen s5</a>
 	</div>
 
 	<div class="w3-bar w3-light-grey secondaryNav">
@@ -119,7 +145,7 @@
                 <div style="margin-bottom: 1em;" class="w3-hide-medium w3-hide-small">
                     <div class="logo" style="display:flex;">
                         <img src="./assets/maintmaster.png" />
-                        <h2 style="margin-left:1em;">Supercupen - B Teammästerskap</h2>
+                        <h2 style="margin-left:1em;">B Teammästerskap</h2>
                     </div>
                 </div>
 
@@ -223,22 +249,35 @@
 
                 </table>
                 <div style="margin:0 auto; text-align:center;">
-                    <p>Senast uppdaterad vid: 2022-10-23T08:23:43Z</p>
+                    <p>Senast uppdaterad vid: 2022-10-23T09:20:49Z</p>
                 </div>
             </div>
         </div>
     </div>
 
     <script>
-        function openNav() {
-            var x = document.getElementById("mobileNav");
-            if (x.className.indexOf("w3-show") == -1) {
-                x.className += " w3-show";
-            } else {
-                x.className = x.className.replace(" w3-show", "");
-            }
+    function openMobileNav() {
+        closeNav("seriesMobileNav");
+        openNav("mobileNav");
+    }
+    function openSeriesMobileNav() {
+        closeNav("mobileNav");
+        openNav("seriesMobileNav");
+    }
+    function closeNav(navId) {
+        var x = document.getElementById(navId);
+        x.className = x.className.replace(" w3-show", "");
+    }
+    function openNav(navId) {
+        var x = document.getElementById(navId);
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else {
+            closeNav(navId);
         }
-    </script>
+    }
+</script>
+
 </body>
 
 </html>
