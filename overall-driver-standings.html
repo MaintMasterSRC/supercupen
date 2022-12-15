@@ -12,7 +12,7 @@
     <head>
 	<title>
 		Supercupen |
-			driver overall
+			driver Total
 	</title>
 </head>
 
@@ -41,7 +41,7 @@
 				<a href="./A-driver-standings.html" class="w3-bar-item w3-button ">A</a>
 				<a href="./B-driver-standings.html" class="w3-bar-item w3-button ">B</a>
 				<a href="./C-driver-standings.html" class="w3-bar-item w3-button ">C</a>
-				<a href="./overall-driver-standings.html" class="w3-bar-item w3-button active">overall</a>
+				<a href="./overall-driver-standings.html" class="w3-bar-item w3-button active">Total</a>
 			</div>
 		</div>
 
@@ -51,11 +51,17 @@
 				<a href="./A-team-standings.html" class="w3-bar-item w3-button ">A</a>
 				<a href="./B-team-standings.html" class="w3-bar-item w3-button ">B</a>
 				<a href="./C-team-standings.html" class="w3-bar-item w3-button ">C</a>
-				<a href="./overall-team-standings.html" class="w3-bar-item w3-button ">overall</a>
+				<a href="./overall-team-standings.html" class="w3-bar-item w3-button ">Total</a>
 			</div>
 		</div>
 
 
+		<div class="w3-bar-item w3-right w3-hide-small w3-hide-medium">
+			<div class="logo">
+				<img src="./assets/country-flags/aus.png" style="max-height: 0.9em;border-radius: 0.3em;"/>
+			</div>
+			<span id="countdown2"></span>
+		</div>
 
         <!-- mobile stuff -->
         <a href="javascript:void(0)" class="logo w3-left w3-hide-large" style="font-size:3em;" onclick="openSeriesMobileNav()">
@@ -66,8 +72,8 @@
         </a>
 
         <h3 class="w3-hide-large navTitle bold" style="display:block;">
-            driver - overall
-            
+            driver - Total
+            <br><span id="countdown"></span>
         </h3>
 
 	</div>
@@ -76,11 +82,11 @@
             <a href="./A-driver-standings.html" class="w3-bar-item w3-button ">Poängställning - A</a>
             <a href="./B-driver-standings.html" class="w3-bar-item w3-button ">Poängställning - B</a>
             <a href="./C-driver-standings.html" class="w3-bar-item w3-button ">Poängställning - C</a>
-            <a href="./overall-driver-standings.html" class="w3-bar-item w3-button active">Poängställning - overall</a>
+            <a href="./overall-driver-standings.html" class="w3-bar-item w3-button active">Poängställning - Total</a>
             <a href="./A-team-standings.html" class="w3-bar-item w3-button ">Teammästerskap - A</a>
             <a href="./B-team-standings.html" class="w3-bar-item w3-button ">Teammästerskap - B</a>
             <a href="./C-team-standings.html" class="w3-bar-item w3-button ">Teammästerskap - C</a>
-            <a href="./overall-team-standings.html" class="w3-bar-item w3-button ">Teammästerskap - overall</a>
+            <a href="./overall-team-standings.html" class="w3-bar-item w3-button ">Teammästerskap - Total</a>
 	</div>
 
 	<div id="seriesMobileNav" class="w3-bar-block w3-black w3-hide w3-hide-large" style="overflow-y:scroll;max-height:95vh;">
@@ -108,8 +114,44 @@
 			<a href="./overall-3-driver-results.html">
 				<img src="./assets/country-flags/deu.png" />
 			</a>
+			<a href="./overall-4-driver-results.html">
+				<img src="./assets/country-flags/aus.png" />
+			</a>
 	</div>
 </div>
+<script>
+	// Set the date we're counting down to
+	var countDownDate = new Date("2022-12-18T22:59:00Z").getTime();
+
+	// Update the count down every 1 second
+	var x = setInterval(function() {
+
+	// Get today's date and time
+	var now = new Date().getTime();
+
+	// Find the distance between now and the count down date
+	var distance = countDownDate - now;
+
+	// Time calculations for days, hours, minutes and seconds
+	var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+	var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+	var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+	var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+	// Output the result in an element with id="demo"
+	document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+	+ minutes + "m " + seconds + "s ";
+	document.getElementById("countdown2").innerHTML = days + "d " + hours + "h "
+	+ minutes + "m " + seconds + "s ";
+
+	// If the count down is over, write some text
+	if (distance < 0) {
+		clearInterval(x);
+		document.getElementById("countdown").innerHTML = "Event Ended";
+		document.getElementById("countdown2").innerHTML = "Event Ended";
+	}
+	}, 1000);
+</script>
 
     <div id="container">
         <div id="flexContainer">
@@ -156,6 +198,12 @@
                                 </a>
                             </th>
 
+                            <th>
+                                <a href="./overall-4-driver-results.html">
+                                    <img src="./assets/country-flags/aus.png" alt="aus" title="aus"/>
+                                </a>
+                            </th>
+
                             <th>Poäng</th>
                         </tr>
                     </thead>
@@ -191,47 +239,16 @@
                                 35
                             </td>
                             
-                            <td class="bold">136</td>
+                            <td>
+                                35
+                            </td>
+                            
+                            <td class="bold">171</td>
                         </tr>
                         <tr style="background-color: ">
                             <td>2</td>
                             <td>
-                                <span class="positive"><i
-                                        class="arrow up"></i>&nbsp;4</span>
-                            </td>
-                            <td>
-                                <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
-                            </td>
-                            <td class="text-left bold">Tomas Nordins</td>
-                                <td>A</td>
-                                    <td class="text-left">Castrol Team Sweden</td>
-                                    <td>
-                                        <img src="./assets/cars/BMW.png" style="max-width:2em; max-height:2em;" alt="BMW" title="BMW"/>
-                                    </td>
-                            
-                            <td>
-                                30
-                            </td>
-                            
-                            <td>
-                                17
-                            </td>
-                            
-                            <td>
-                                28
-                            </td>
-                            
-                            <td>
-                                29
-                            </td>
-                            
-                            <td class="bold">104</td>
-                        </tr>
-                        <tr style="background-color: ">
-                            <td>2</td>
-                            <td>
-                                <span class="positive"><i
-                                        class="arrow up"></i>&nbsp;2</span>
+                                <span class="neutral">=</span>
                             </td>
                             <td>
                                 <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
@@ -259,81 +276,17 @@
                                 27
                             </td>
                             
-                            <td class="bold">104</td>
+                            <td>
+                                32
+                            </td>
+                            
+                            <td class="bold">136</td>
                         </tr>
                         <tr style="background-color: ">
-                            <td>4</td>
+                            <td>3</td>
                             <td>
                                 <span class="positive"><i
-                                        class="arrow up"></i>&nbsp;1</span>
-                            </td>
-                            <td>
-                                <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
-                            </td>
-                            <td class="text-left bold">Rickard Persson</td>
-                                <td>C</td>
-                                    <td class="text-left">Castrol Team Sweden</td>
-                                    <td>
-                                        <img src="./assets/cars/BMW.png" style="max-width:2em; max-height:2em;" alt="BMW" title="BMW"/>
-                                    </td>
-                            
-                            <td>
-                                21
-                            </td>
-                            
-                            <td>
-                                30
-                            </td>
-                            
-                            <td>
-                                25
-                            </td>
-                            
-                            <td>
-                                25
-                            </td>
-                            
-                            <td class="bold">101</td>
-                        </tr>
-                        <tr style="background-color: ">
-                            <td>5</td>
-                            <td>
-                                <span class="negative"><i
-                                        class="arrow down"></i>&nbsp;-3</span>
-                            </td>
-                            <td>
-                                <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
-                            </td>
-                            <td class="text-left bold">Fredrik Fält</td>
-                                <td>C</td>
-                                    <td class="text-left">Kapow Racing Sverige</td>
-                                    <td>
-                                        <img src="./assets/cars/volkswagen.png" style="max-width:2em; max-height:2em;" alt="volkswagen" title="volkswagen"/>
-                                    </td>
-                            
-                            <td>
-                                35
-                            </td>
-                            
-                            <td>
-                                30
-                            </td>
-                            
-                            <td>
-                                35
-                            </td>
-                            
-                            <td>
-                                DNF
-                            </td>
-                            
-                            <td class="bold">100</td>
-                        </tr>
-                        <tr style="background-color: ">
-                            <td>6</td>
-                            <td>
-                                <span class="positive"><i
-                                        class="arrow up"></i>&nbsp;6</span>
+                                        class="arrow up"></i>&nbsp;3</span>
                             </td>
                             <td>
                                 <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
@@ -361,115 +314,17 @@
                                 29
                             </td>
                             
-                            <td class="bold">99</td>
+                            <td>
+                                34
+                            </td>
+                            
+                            <td class="bold">133</td>
                         </tr>
                         <tr style="background-color: ">
-                            <td>7</td>
+                            <td>4</td>
                             <td>
                                 <span class="positive"><i
-                                        class="arrow up"></i>&nbsp;2</span>
-                            </td>
-                            <td>
-                                <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
-                            </td>
-                            <td class="text-left bold">Staffan Magnusson</td>
-                                <td>B</td>
-                                    <td class="text-left">privateer</td>
-                                    <td>
-                                        <img src="./assets/cars/volkswagen.png" style="max-width:2em; max-height:2em;" alt="volkswagen" title="volkswagen"/>
-                                    </td>
-                            
-                            <td>
-                                21
-                            </td>
-                            
-                            <td>
-                                27
-                            </td>
-                            
-                            <td>
-                                24
-                            </td>
-                            
-                            <td>
-                                23
-                            </td>
-                            
-                            <td class="bold">95</td>
-                        </tr>
-                        <tr style="background-color: ">
-                            <td>8</td>
-                            <td>
-                                <span class="positive"><i
-                                        class="arrow up"></i>&nbsp;3</span>
-                            </td>
-                            <td>
-                                <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
-                            </td>
-                            <td class="text-left bold">Thomas Dahn</td>
-                                <td>A</td>
-                                    <td class="text-left">Kapow Racing Sverige</td>
-                                    <td>
-                                        <img src="./assets/cars/peugot.png" style="max-width:2em; max-height:2em;" alt="peugot" title="peugot"/>
-                                    </td>
-                            
-                            <td>
-                                25
-                            </td>
-                            
-                            <td>
-                                24
-                            </td>
-                            
-                            <td>
-                                22
-                            </td>
-                            
-                            <td>
-                                23
-                            </td>
-                            
-                            <td class="bold">94</td>
-                        </tr>
-                        <tr style="background-color: ">
-                            <td>9</td>
-                            <td>
-                                <span class="positive"><i
-                                        class="arrow up"></i>&nbsp;8</span>
-                            </td>
-                            <td>
-                                <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
-                            </td>
-                            <td class="text-left bold">Johan Olsson</td>
-                                <td>A</td>
-                                    <td class="text-left">Castrol Team Sweden</td>
-                                    <td>
-                                        <img src="./assets/cars/BMW.png" style="max-width:2em; max-height:2em;" alt="BMW" title="BMW"/>
-                                    </td>
-                            
-                            <td>
-                                8
-                            </td>
-                            
-                            <td>
-                                23
-                            </td>
-                            
-                            <td>
-                                20
-                            </td>
-                            
-                            <td>
-                                33
-                            </td>
-                            
-                            <td class="bold">84</td>
-                        </tr>
-                        <tr style="background-color: ">
-                            <td>10</td>
-                            <td>
-                                <span class="positive"><i
-                                        class="arrow up"></i>&nbsp;5</span>
+                                        class="arrow up"></i>&nbsp;6</span>
                             </td>
                             <td>
                                 <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
@@ -497,30 +352,38 @@
                                 25
                             </td>
                             
-                            <td class="bold">83</td>
+                            <td>
+                                31
+                            </td>
+                            
+                            <td class="bold">114</td>
                         </tr>
                         <tr style="background-color: ">
-                            <td>10</td>
+                            <td>5</td>
                             <td>
                                 <span class="negative"><i
-                                        class="arrow down"></i>&nbsp;-7</span>
+                                        class="arrow down"></i>&nbsp;-3</span>
                             </td>
                             <td>
                                 <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
                             </td>
-                            <td class="text-left bold">Stefan Magnusson</td>
-                                <td>B</td>
+                            <td class="text-left bold">Tomas Nordins</td>
+                                <td>A</td>
                                     <td class="text-left">Castrol Team Sweden</td>
                                     <td>
-                                        <img src="./assets/cars/seat.png" style="max-width:2em; max-height:2em;" alt="seat" title="seat"/>
+                                        <img src="./assets/cars/BMW.png" style="max-width:2em; max-height:2em;" alt="BMW" title="BMW"/>
                                     </td>
                             
                             <td>
-                                33
+                                30
                             </td>
                             
                             <td>
-                                21
+                                17
+                            </td>
+                            
+                            <td>
+                                28
                             </td>
                             
                             <td>
@@ -528,29 +391,33 @@
                             </td>
                             
                             <td>
-                                DNS
+                                
                             </td>
                             
-                            <td class="bold">83</td>
+                            <td class="bold">104</td>
                         </tr>
                         <tr style="background-color: ">
-                            <td>12</td>
+                            <td>6</td>
                             <td>
-                                <span class="positive"><i
-                                        class="arrow up"></i>&nbsp;2</span>
+                                <span class="negative"><i
+                                        class="arrow down"></i>&nbsp;-2</span>
                             </td>
                             <td>
                                 <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
                             </td>
-                            <td class="text-left bold">Anders Olsson</td>
-                                <td>A</td>
+                            <td class="text-left bold">Rickard Persson</td>
+                                <td>C</td>
                                     <td class="text-left">Castrol Team Sweden</td>
                                     <td>
                                         <img src="./assets/cars/BMW.png" style="max-width:2em; max-height:2em;" alt="BMW" title="BMW"/>
                                     </td>
                             
                             <td>
-                                11
+                                21
+                            </td>
+                            
+                            <td>
+                                30
                             </td>
                             
                             <td>
@@ -558,29 +425,67 @@
                             </td>
                             
                             <td>
-                                24
+                                25
                             </td>
                             
                             <td>
-                                16
+                                
                             </td>
                             
-                            <td class="bold">76</td>
+                            <td class="bold">101</td>
                         </tr>
                         <tr style="background-color: ">
-                            <td>13</td>
+                            <td>7</td>
                             <td>
                                 <span class="negative"><i
-                                        class="arrow down"></i>&nbsp;-7</span>
+                                        class="arrow down"></i>&nbsp;-2</span>
                             </td>
                             <td>
                                 <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
                             </td>
-                            <td class="text-left bold">Oskar Norlin</td>
-                                <td>A</td>
-                                    <td class="text-left">Wermland Rally Team</td>
+                            <td class="text-left bold">Fredrik Fält</td>
+                                <td>C</td>
+                                    <td class="text-left">Kapow Racing Sverige</td>
                                     <td>
-                                        <img src="./assets/cars/BMW.png" style="max-width:2em; max-height:2em;" alt="BMW" title="BMW"/>
+                                        <img src="./assets/cars/volkswagen.png" style="max-width:2em; max-height:2em;" alt="volkswagen" title="volkswagen"/>
+                                    </td>
+                            
+                            <td>
+                                35
+                            </td>
+                            
+                            <td>
+                                30
+                            </td>
+                            
+                            <td>
+                                35
+                            </td>
+                            
+                            <td>
+                                DNF
+                            </td>
+                            
+                            <td>
+                                
+                            </td>
+                            
+                            <td class="bold">100</td>
+                        </tr>
+                        <tr style="background-color: ">
+                            <td>8</td>
+                            <td>
+                                <span class="negative"><i
+                                        class="arrow down"></i>&nbsp;-1</span>
+                            </td>
+                            <td>
+                                <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
+                            </td>
+                            <td class="text-left bold">Staffan Magnusson</td>
+                                <td>B</td>
+                                    <td class="text-left">privateer</td>
+                                    <td>
+                                        <img src="./assets/cars/volkswagen.png" style="max-width:2em; max-height:2em;" alt="volkswagen" title="volkswagen"/>
                                     </td>
                             
                             <td>
@@ -592,224 +497,24 @@
                             </td>
                             
                             <td>
-                                27
-                            </td>
-                            
-                            <td>
-                                DNF
-                            </td>
-                            
-                            <td class="bold">75</td>
-                        </tr>
-                        <tr style="background-color: ">
-                            <td>14</td>
-                            <td>
-                                <span class="negative"><i
-                                        class="arrow down"></i>&nbsp;-6</span>
-                            </td>
-                            <td>
-                                <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
-                            </td>
-                            <td class="text-left bold">Jesper Persson</td>
-                                <td>C</td>
-                                    <td class="text-left">Castrol Team Sweden</td>
-                                    <td>
-                                        <img src="./assets/cars/ford.png" style="max-width:2em; max-height:2em;" alt="ford" title="ford"/>
-                                    </td>
-                            
-                            <td>
-                                18
-                            </td>
-                            
-                            <td>
-                                34
-                            </td>
-                            
-                            <td>
-                                22
-                            </td>
-                            
-                            <td>
-                                DNF
-                            </td>
-                            
-                            <td class="bold">74</td>
-                        </tr>
-                        <tr style="background-color: ">
-                            <td>15</td>
-                            <td>
-                                <span class="negative"><i
-                                        class="arrow down"></i>&nbsp;-6</span>
-                            </td>
-                            <td>
-                                <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
-                            </td>
-                            <td class="text-left bold">Tomas Eriksson</td>
-                                <td>B</td>
-                                    <td class="text-left">Castrol Rally Team</td>
-                                    <td>
-                                        <img src="./assets/cars/seat.png" style="max-width:2em; max-height:2em;" alt="seat" title="seat"/>
-                                    </td>
-                            
-                            <td>
-                                23
-                            </td>
-                            
-                            <td>
-                                19
-                            </td>
-                            
-                            <td>
-                                30
-                            </td>
-                            
-                            <td>
-                                DNF
-                            </td>
-                            
-                            <td class="bold">72</td>
-                        </tr>
-                        <tr style="background-color: ">
-                            <td>16</td>
-                            <td>
-                                <span class="positive"><i
-                                        class="arrow up"></i>&nbsp;7</span>
-                            </td>
-                            <td>
-                                <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
-                            </td>
-                            <td class="text-left bold">Rickard Emtweden</td>
-                                <td>C</td>
-                                    <td class="text-left">privateer</td>
-                                    <td>
-                                        <img src="./assets/cars/volkswagen.png" style="max-width:2em; max-height:2em;" alt="volkswagen" title="volkswagen"/>
-                                    </td>
-                            
-                            <td>
-                                DNS
-                            </td>
-                            
-                            <td>
-                                18
-                            </td>
-                            
-                            <td>
-                                27
-                            </td>
-                            
-                            <td>
-                                25
-                            </td>
-                            
-                            <td class="bold">70</td>
-                        </tr>
-                        <tr style="background-color: ">
-                            <td>17</td>
-                            <td>
-                                <span class="positive"><i
-                                        class="arrow up"></i>&nbsp;4</span>
-                            </td>
-                            <td>
-                                <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
-                            </td>
-                            <td class="text-left bold">Björn Hvit</td>
-                                <td>B</td>
-                                    <td class="text-left">Castrol Rally Team</td>
-                                    <td>
-                                        <img src="./assets/cars/volkswagen.png" style="max-width:2em; max-height:2em;" alt="volkswagen" title="volkswagen"/>
-                                    </td>
-                            
-                            <td>
-                                20
-                            </td>
-                            
-                            <td>
-                                DNS
-                            </td>
-                            
-                            <td>
-                                26
-                            </td>
-                            
-                            <td>
-                                23
-                            </td>
-                            
-                            <td class="bold">69</td>
-                        </tr>
-                        <tr style="background-color: ">
-                            <td>17</td>
-                            <td>
-                                <span class="positive"><i
-                                        class="arrow up"></i>&nbsp;1</span>
-                            </td>
-                            <td>
-                                <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
-                            </td>
-                            <td class="text-left bold">Leif Backlund</td>
-                                <td>C</td>
-                                    <td class="text-left">privateer</td>
-                                    <td>
-                                        <img src="./assets/cars/seat.png" style="max-width:2em; max-height:2em;" alt="seat" title="seat"/>
-                                    </td>
-                            
-                            <td>
-                                26
-                            </td>
-                            
-                            <td>
                                 24
                             </td>
                             
                             <td>
-                                DNF
+                                23
                             </td>
                             
                             <td>
-                                19
+                                
                             </td>
                             
-                            <td class="bold">69</td>
+                            <td class="bold">95</td>
                         </tr>
                         <tr style="background-color: ">
-                            <td>19</td>
-                            <td>
-                                <span class="negative"><i
-                                        class="arrow down"></i>&nbsp;-6</span>
-                            </td>
-                            <td>
-                                <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
-                            </td>
-                            <td class="text-left bold">Henka Andersson</td>
-                                <td>A</td>
-                                    <td class="text-left">Wermland Rally Team</td>
-                                    <td>
-                                        <img src="./assets/cars/BMW.png" style="max-width:2em; max-height:2em;" alt="BMW" title="BMW"/>
-                                    </td>
-                            
-                            <td>
-                                34
-                            </td>
-                            
-                            <td>
-                                DNS
-                            </td>
-                            
-                            <td>
-                                34
-                            </td>
-                            
-                            <td>
-                                DNS
-                            </td>
-                            
-                            <td class="bold">68</td>
-                        </tr>
-                        <tr style="background-color: ">
-                            <td>20</td>
+                            <td>9</td>
                             <td>
                                 <span class="positive"><i
-                                        class="arrow up"></i>&nbsp;4</span>
+                                        class="arrow up"></i>&nbsp;11</span>
                             </td>
                             <td>
                                 <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
@@ -837,13 +542,434 @@
                                 24
                             </td>
                             
-                            <td class="bold">66</td>
+                            <td>
+                                28
+                            </td>
+                            
+                            <td class="bold">94</td>
+                        </tr>
+                        <tr style="background-color: ">
+                            <td>9</td>
+                            <td>
+                                <span class="negative"><i
+                                        class="arrow down"></i>&nbsp;-1</span>
+                            </td>
+                            <td>
+                                <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
+                            </td>
+                            <td class="text-left bold">Thomas Dahn</td>
+                                <td>A</td>
+                                    <td class="text-left">Kapow Racing Sverige</td>
+                                    <td>
+                                        <img src="./assets/cars/peugot.png" style="max-width:2em; max-height:2em;" alt="peugot" title="peugot"/>
+                                    </td>
+                            
+                            <td>
+                                25
+                            </td>
+                            
+                            <td>
+                                24
+                            </td>
+                            
+                            <td>
+                                22
+                            </td>
+                            
+                            <td>
+                                23
+                            </td>
+                            
+                            <td>
+                                
+                            </td>
+                            
+                            <td class="bold">94</td>
+                        </tr>
+                        <tr style="background-color: ">
+                            <td>11</td>
+                            <td>
+                                <span class="negative"><i
+                                        class="arrow down"></i>&nbsp;-2</span>
+                            </td>
+                            <td>
+                                <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
+                            </td>
+                            <td class="text-left bold">Johan Olsson</td>
+                                <td>A</td>
+                                    <td class="text-left">Castrol Team Sweden</td>
+                                    <td>
+                                        <img src="./assets/cars/BMW.png" style="max-width:2em; max-height:2em;" alt="BMW" title="BMW"/>
+                                    </td>
+                            
+                            <td>
+                                8
+                            </td>
+                            
+                            <td>
+                                23
+                            </td>
+                            
+                            <td>
+                                20
+                            </td>
+                            
+                            <td>
+                                33
+                            </td>
+                            
+                            <td>
+                                
+                            </td>
+                            
+                            <td class="bold">84</td>
+                        </tr>
+                        <tr style="background-color: ">
+                            <td>12</td>
+                            <td>
+                                <span class="negative"><i
+                                        class="arrow down"></i>&nbsp;-2</span>
+                            </td>
+                            <td>
+                                <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
+                            </td>
+                            <td class="text-left bold">Stefan Magnusson</td>
+                                <td>B</td>
+                                    <td class="text-left">Castrol Team Sweden</td>
+                                    <td>
+                                        <img src="./assets/cars/seat.png" style="max-width:2em; max-height:2em;" alt="seat" title="seat"/>
+                                    </td>
+                            
+                            <td>
+                                33
+                            </td>
+                            
+                            <td>
+                                21
+                            </td>
+                            
+                            <td>
+                                29
+                            </td>
+                            
+                            <td>
+                                DNS
+                            </td>
+                            
+                            <td>
+                                
+                            </td>
+                            
+                            <td class="bold">83</td>
+                        </tr>
+                        <tr style="background-color: ">
+                            <td>13</td>
+                            <td>
+                                <span class="negative"><i
+                                        class="arrow down"></i>&nbsp;-1</span>
+                            </td>
+                            <td>
+                                <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
+                            </td>
+                            <td class="text-left bold">Anders Olsson</td>
+                                <td>A</td>
+                                    <td class="text-left">Castrol Team Sweden</td>
+                                    <td>
+                                        <img src="./assets/cars/BMW.png" style="max-width:2em; max-height:2em;" alt="BMW" title="BMW"/>
+                                    </td>
+                            
+                            <td>
+                                11
+                            </td>
+                            
+                            <td>
+                                25
+                            </td>
+                            
+                            <td>
+                                24
+                            </td>
+                            
+                            <td>
+                                16
+                            </td>
+                            
+                            <td>
+                                
+                            </td>
+                            
+                            <td class="bold">76</td>
+                        </tr>
+                        <tr style="background-color: ">
+                            <td>14</td>
+                            <td>
+                                <span class="negative"><i
+                                        class="arrow down"></i>&nbsp;-1</span>
+                            </td>
+                            <td>
+                                <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
+                            </td>
+                            <td class="text-left bold">Oskar Norlin</td>
+                                <td>A</td>
+                                    <td class="text-left">Wermland Rally Team</td>
+                                    <td>
+                                        <img src="./assets/cars/BMW.png" style="max-width:2em; max-height:2em;" alt="BMW" title="BMW"/>
+                                    </td>
+                            
+                            <td>
+                                21
+                            </td>
+                            
+                            <td>
+                                27
+                            </td>
+                            
+                            <td>
+                                27
+                            </td>
+                            
+                            <td>
+                                DNF
+                            </td>
+                            
+                            <td>
+                                
+                            </td>
+                            
+                            <td class="bold">75</td>
+                        </tr>
+                        <tr style="background-color: ">
+                            <td>15</td>
+                            <td>
+                                <span class="negative"><i
+                                        class="arrow down"></i>&nbsp;-1</span>
+                            </td>
+                            <td>
+                                <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
+                            </td>
+                            <td class="text-left bold">Jesper Persson</td>
+                                <td>C</td>
+                                    <td class="text-left">Castrol Team Sweden</td>
+                                    <td>
+                                        <img src="./assets/cars/ford.png" style="max-width:2em; max-height:2em;" alt="ford" title="ford"/>
+                                    </td>
+                            
+                            <td>
+                                18
+                            </td>
+                            
+                            <td>
+                                34
+                            </td>
+                            
+                            <td>
+                                22
+                            </td>
+                            
+                            <td>
+                                DNF
+                            </td>
+                            
+                            <td>
+                                
+                            </td>
+                            
+                            <td class="bold">74</td>
+                        </tr>
+                        <tr style="background-color: ">
+                            <td>16</td>
+                            <td>
+                                <span class="negative"><i
+                                        class="arrow down"></i>&nbsp;-1</span>
+                            </td>
+                            <td>
+                                <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
+                            </td>
+                            <td class="text-left bold">Tomas Eriksson</td>
+                                <td>B</td>
+                                    <td class="text-left">Castrol Rally Team</td>
+                                    <td>
+                                        <img src="./assets/cars/seat.png" style="max-width:2em; max-height:2em;" alt="seat" title="seat"/>
+                                    </td>
+                            
+                            <td>
+                                23
+                            </td>
+                            
+                            <td>
+                                19
+                            </td>
+                            
+                            <td>
+                                30
+                            </td>
+                            
+                            <td>
+                                DNF
+                            </td>
+                            
+                            <td>
+                                
+                            </td>
+                            
+                            <td class="bold">72</td>
+                        </tr>
+                        <tr style="background-color: ">
+                            <td>17</td>
+                            <td>
+                                <span class="negative"><i
+                                        class="arrow down"></i>&nbsp;-1</span>
+                            </td>
+                            <td>
+                                <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
+                            </td>
+                            <td class="text-left bold">Rickard Emtweden</td>
+                                <td>C</td>
+                                    <td class="text-left">privateer</td>
+                                    <td>
+                                        <img src="./assets/cars/volkswagen.png" style="max-width:2em; max-height:2em;" alt="volkswagen" title="volkswagen"/>
+                                    </td>
+                            
+                            <td>
+                                DNS
+                            </td>
+                            
+                            <td>
+                                18
+                            </td>
+                            
+                            <td>
+                                27
+                            </td>
+                            
+                            <td>
+                                25
+                            </td>
+                            
+                            <td>
+                                
+                            </td>
+                            
+                            <td class="bold">70</td>
+                        </tr>
+                        <tr style="background-color: ">
+                            <td>18</td>
+                            <td>
+                                <span class="negative"><i
+                                        class="arrow down"></i>&nbsp;-1</span>
+                            </td>
+                            <td>
+                                <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
+                            </td>
+                            <td class="text-left bold">Leif Backlund</td>
+                                <td>C</td>
+                                    <td class="text-left">privateer</td>
+                                    <td>
+                                        <img src="./assets/cars/seat.png" style="max-width:2em; max-height:2em;" alt="seat" title="seat"/>
+                                    </td>
+                            
+                            <td>
+                                26
+                            </td>
+                            
+                            <td>
+                                24
+                            </td>
+                            
+                            <td>
+                                DNF
+                            </td>
+                            
+                            <td>
+                                19
+                            </td>
+                            
+                            <td>
+                                DNF
+                            </td>
+                            
+                            <td class="bold">69</td>
+                        </tr>
+                        <tr style="background-color: ">
+                            <td>18</td>
+                            <td>
+                                <span class="negative"><i
+                                        class="arrow down"></i>&nbsp;-1</span>
+                            </td>
+                            <td>
+                                <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
+                            </td>
+                            <td class="text-left bold">Björn Hvit</td>
+                                <td>B</td>
+                                    <td class="text-left">Castrol Rally Team</td>
+                                    <td>
+                                        <img src="./assets/cars/volkswagen.png" style="max-width:2em; max-height:2em;" alt="volkswagen" title="volkswagen"/>
+                                    </td>
+                            
+                            <td>
+                                20
+                            </td>
+                            
+                            <td>
+                                DNS
+                            </td>
+                            
+                            <td>
+                                26
+                            </td>
+                            
+                            <td>
+                                23
+                            </td>
+                            
+                            <td>
+                                
+                            </td>
+                            
+                            <td class="bold">69</td>
+                        </tr>
+                        <tr style="background-color: ">
+                            <td>20</td>
+                            <td>
+                                <span class="negative"><i
+                                        class="arrow down"></i>&nbsp;-1</span>
+                            </td>
+                            <td>
+                                <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
+                            </td>
+                            <td class="text-left bold">Henka Andersson</td>
+                                <td>A</td>
+                                    <td class="text-left">Wermland Rally Team</td>
+                                    <td>
+                                        <img src="./assets/cars/BMW.png" style="max-width:2em; max-height:2em;" alt="BMW" title="BMW"/>
+                                    </td>
+                            
+                            <td>
+                                34
+                            </td>
+                            
+                            <td>
+                                DNS
+                            </td>
+                            
+                            <td>
+                                34
+                            </td>
+                            
+                            <td>
+                                DNS
+                            </td>
+                            
+                            <td>
+                                
+                            </td>
+                            
+                            <td class="bold">68</td>
                         </tr>
                         <tr style="background-color: ">
                             <td>21</td>
                             <td>
-                                <span class="positive"><i
-                                        class="arrow up"></i>&nbsp;7</span>
+                                <span class="neutral">=</span>
                             </td>
                             <td>
                                 <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
@@ -871,13 +997,16 @@
                                 35
                             </td>
                             
+                            <td>
+                                
+                            </td>
+                            
                             <td class="bold">64</td>
                         </tr>
                         <tr style="background-color: ">
                             <td>22</td>
                             <td>
-                                <span class="positive"><i
-                                        class="arrow up"></i>&nbsp;4</span>
+                                <span class="neutral">=</span>
                             </td>
                             <td>
                                 <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
@@ -905,13 +1034,16 @@
                                 29
                             </td>
                             
+                            <td>
+                                
+                            </td>
+                            
                             <td class="bold">63</td>
                         </tr>
                         <tr style="background-color: ">
                             <td>23</td>
                             <td>
-                                <span class="positive"><i
-                                        class="arrow up"></i>&nbsp;7</span>
+                                <span class="neutral">=</span>
                             </td>
                             <td>
                                 <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
@@ -939,13 +1071,16 @@
                                 31
                             </td>
                             
+                            <td>
+                                
+                            </td>
+                            
                             <td class="bold">58</td>
                         </tr>
                         <tr style="background-color: ">
                             <td>24</td>
                             <td>
-                                <span class="positive"><i
-                                        class="arrow up"></i>&nbsp;1</span>
+                                <span class="neutral">=</span>
                             </td>
                             <td>
                                 <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
@@ -973,13 +1108,16 @@
                                 21
                             </td>
                             
+                            <td>
+                                
+                            </td>
+                            
                             <td class="bold">57</td>
                         </tr>
                         <tr style="background-color: ">
                             <td>25</td>
                             <td>
-                                <span class="negative"><i
-                                        class="arrow down"></i>&nbsp;-9</span>
+                                <span class="neutral">=</span>
                             </td>
                             <td>
                                 <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
@@ -1007,13 +1145,16 @@
                                 DNF
                             </td>
                             
+                            <td>
+                                
+                            </td>
+                            
                             <td class="bold">54</td>
                         </tr>
                         <tr style="background-color: ">
                             <td>26</td>
                             <td>
-                                <span class="positive"><i
-                                        class="arrow up"></i>&nbsp;9</span>
+                                <span class="neutral">=</span>
                             </td>
                             <td>
                                 <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
@@ -1041,13 +1182,16 @@
                                 29
                             </td>
                             
+                            <td>
+                                
+                            </td>
+                            
                             <td class="bold">51</td>
                         </tr>
                         <tr style="background-color: ">
                             <td>27</td>
                             <td>
-                                <span class="negative"><i
-                                        class="arrow down"></i>&nbsp;-8</span>
+                                <span class="neutral">=</span>
                             </td>
                             <td>
                                 <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
@@ -1075,13 +1219,16 @@
                                 DNF
                             </td>
                             
+                            <td>
+                                
+                            </td>
+                            
                             <td class="bold">49</td>
                         </tr>
                         <tr style="background-color: ">
                             <td>28</td>
                             <td>
-                                <span class="negative"><i
-                                        class="arrow down"></i>&nbsp;-8</span>
+                                <span class="neutral">=</span>
                             </td>
                             <td>
                                 <img src="./assets/country-flags/aus.png" style="max-width:1.5em; max-height:1.5em;" alt="aus" title="aus"/>
@@ -1109,13 +1256,16 @@
                                 DNS
                             </td>
                             
+                            <td>
+                                DNF
+                            </td>
+                            
                             <td class="bold">47</td>
                         </tr>
                         <tr style="background-color: ">
                             <td>29</td>
                             <td>
-                                <span class="negative"><i
-                                        class="arrow down"></i>&nbsp;-1</span>
+                                <span class="neutral">=</span>
                             </td>
                             <td>
                                 <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
@@ -1143,13 +1293,16 @@
                                 17
                             </td>
                             
+                            <td>
+                                
+                            </td>
+                            
                             <td class="bold">46</td>
                         </tr>
                         <tr style="background-color: ">
                             <td>29</td>
                             <td>
-                                <span class="negative"><i
-                                        class="arrow down"></i>&nbsp;-8</span>
+                                <span class="neutral">=</span>
                             </td>
                             <td>
                                 <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
@@ -1177,13 +1330,16 @@
                                 DNF
                             </td>
                             
+                            <td>
+                                
+                            </td>
+                            
                             <td class="bold">46</td>
                         </tr>
                         <tr style="background-color: ">
                             <td>31</td>
                             <td>
-                                <span class="positive"><i
-                                        class="arrow up"></i>&nbsp;6</span>
+                                <span class="neutral">=</span>
                             </td>
                             <td>
                                 <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
@@ -1211,13 +1367,16 @@
                                 19
                             </td>
                             
+                            <td>
+                                
+                            </td>
+                            
                             <td class="bold">38</td>
                         </tr>
                         <tr style="background-color: ">
                             <td>32</td>
                             <td>
-                                <span class="negative"><i
-                                        class="arrow down"></i>&nbsp;-5</span>
+                                <span class="neutral">=</span>
                             </td>
                             <td>
                                 <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
@@ -1245,13 +1404,16 @@
                                 DNS
                             </td>
                             
+                            <td>
+                                
+                            </td>
+                            
                             <td class="bold">32</td>
                         </tr>
                         <tr style="background-color: ">
                             <td>33</td>
                             <td>
-                                <span class="positive"><i
-                                        class="arrow up"></i>&nbsp;10</span>
+                                <span class="neutral">=</span>
                             </td>
                             <td>
                                 <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
@@ -1279,13 +1441,16 @@
                                 28
                             </td>
                             
+                            <td>
+                                
+                            </td>
+                            
                             <td class="bold">28</td>
                         </tr>
                         <tr style="background-color: ">
                             <td>34</td>
                             <td>
-                                <span class="negative"><i
-                                        class="arrow down"></i>&nbsp;-4</span>
+                                <span class="neutral">=</span>
                             </td>
                             <td>
                                 <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
@@ -1313,13 +1478,16 @@
                                 DNS
                             </td>
                             
+                            <td>
+                                
+                            </td>
+                            
                             <td class="bold">27</td>
                         </tr>
                         <tr style="background-color: ">
                             <td>34</td>
                             <td>
-                                <span class="negative"><i
-                                        class="arrow down"></i>&nbsp;-4</span>
+                                <span class="neutral">=</span>
                             </td>
                             <td>
                                 <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
@@ -1347,47 +1515,16 @@
                                 DNS
                             </td>
                             
+                            <td>
+                                
+                            </td>
+                            
                             <td class="bold">27</td>
                         </tr>
                         <tr style="background-color: ">
                             <td>36</td>
                             <td>
-                                <span class="negative"><i
-                                        class="arrow down"></i>&nbsp;-3</span>
-                            </td>
-                            <td>
-                                <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
-                            </td>
-                            <td class="text-left bold">Jesper Fröjd</td>
-                                <td>B</td>
-                                    <td class="text-left">Kapow Racing Sverige</td>
-                                    <td>
-                                        <img src="./assets/cars/BMW.png" style="max-width:2em; max-height:2em;" alt="BMW" title="BMW"/>
-                                    </td>
-                            
-                            <td>
-                                DNS
-                            </td>
-                            
-                            <td>
-                                24
-                            </td>
-                            
-                            <td>
-                                DNS
-                            </td>
-                            
-                            <td>
-                                DNF
-                            </td>
-                            
-                            <td class="bold">24</td>
-                        </tr>
-                        <tr style="background-color: ">
-                            <td>36</td>
-                            <td>
-                                <span class="negative"><i
-                                        class="arrow down"></i>&nbsp;-3</span>
+                                <span class="neutral">=</span>
                             </td>
                             <td>
                                 <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
@@ -1415,13 +1552,53 @@
                                 DNF
                             </td>
                             
+                            <td>
+                                
+                            </td>
+                            
+                            <td class="bold">24</td>
+                        </tr>
+                        <tr style="background-color: ">
+                            <td>36</td>
+                            <td>
+                                <span class="neutral">=</span>
+                            </td>
+                            <td>
+                                <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
+                            </td>
+                            <td class="text-left bold">Jesper Fröjd</td>
+                                <td>B</td>
+                                    <td class="text-left">Kapow Racing Sverige</td>
+                                    <td>
+                                        <img src="./assets/cars/BMW.png" style="max-width:2em; max-height:2em;" alt="BMW" title="BMW"/>
+                                    </td>
+                            
+                            <td>
+                                DNS
+                            </td>
+                            
+                            <td>
+                                24
+                            </td>
+                            
+                            <td>
+                                DNS
+                            </td>
+                            
+                            <td>
+                                DNF
+                            </td>
+                            
+                            <td>
+                                
+                            </td>
+                            
                             <td class="bold">24</td>
                         </tr>
                         <tr style="background-color: ">
                             <td>38</td>
                             <td>
-                                <span class="negative"><i
-                                        class="arrow down"></i>&nbsp;-2</span>
+                                <span class="neutral">=</span>
                             </td>
                             <td>
                                 <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
@@ -1449,13 +1626,16 @@
                                 DNS
                             </td>
                             
+                            <td>
+                                
+                            </td>
+                            
                             <td class="bold">21</td>
                         </tr>
                         <tr style="background-color: ">
                             <td>39</td>
                             <td>
-                                <span class="negative"><i
-                                        class="arrow down"></i>&nbsp;-1</span>
+                                <span class="neutral">=</span>
                             </td>
                             <td>
                                 <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
@@ -1483,13 +1663,16 @@
                                 DNS
                             </td>
                             
+                            <td>
+                                
+                            </td>
+                            
                             <td class="bold">17</td>
                         </tr>
                         <tr style="background-color: ">
                             <td>40</td>
                             <td>
-                                <span class="negative"><i
-                                        class="arrow down"></i>&nbsp;-1</span>
+                                <span class="neutral">=</span>
                             </td>
                             <td>
                                 <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
@@ -1517,13 +1700,16 @@
                                 DNS
                             </td>
                             
+                            <td>
+                                
+                            </td>
+                            
                             <td class="bold">15</td>
                         </tr>
                         <tr style="background-color: ">
                             <td>40</td>
                             <td>
-                                <span class="negative"><i
-                                        class="arrow down"></i>&nbsp;-1</span>
+                                <span class="neutral">=</span>
                             </td>
                             <td>
                                 <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
@@ -1551,13 +1737,16 @@
                                 DNS
                             </td>
                             
+                            <td>
+                                
+                            </td>
+                            
                             <td class="bold">15</td>
                         </tr>
                         <tr style="background-color: ">
                             <td>42</td>
                             <td>
-                                <span class="negative"><i
-                                        class="arrow down"></i>&nbsp;-1</span>
+                                <span class="neutral">=</span>
                             </td>
                             <td>
                                 <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
@@ -1585,13 +1774,16 @@
                                 DNS
                             </td>
                             
+                            <td>
+                                
+                            </td>
+                            
                             <td class="bold">13</td>
                         </tr>
                         <tr style="background-color: ">
                             <td>43</td>
                             <td>
-                                <span class="negative"><i
-                                        class="arrow down"></i>&nbsp;-1</span>
+                                <span class="neutral">=</span>
                             </td>
                             <td>
                                 <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
@@ -1619,81 +1811,16 @@
                                 DNS
                             </td>
                             
+                            <td>
+                                
+                            </td>
+                            
                             <td class="bold">6</td>
                         </tr>
                         <tr style="background-color: ">
                             <td>44</td>
                             <td>
-                                <span class="negative"><i
-                                        class="arrow down"></i>&nbsp;-1</span>
-                            </td>
-                            <td>
-                                <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
-                            </td>
-                            <td class="text-left bold">Jimmy Bengtsson</td>
-                                <td>A</td>
-                                    <td class="text-left">Kapow Racing Finland</td>
-                                    <td>
-                                        <img src="./assets/cars/peugot.png" style="max-width:2em; max-height:2em;" alt="peugot" title="peugot"/>
-                                    </td>
-                            
-                            <td>
-                                DNS
-                            </td>
-                            
-                            <td>
-                                DNS
-                            </td>
-                            
-                            <td>
-                                DNS
-                            </td>
-                            
-                            <td>
-                                DNF
-                            </td>
-                            
-                            <td class="bold">0</td>
-                        </tr>
-                        <tr style="background-color: ">
-                            <td>44</td>
-                            <td>
-                                <span class="negative"><i
-                                        class="arrow down"></i>&nbsp;-1</span>
-                            </td>
-                            <td>
-                                <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
-                            </td>
-                            <td class="text-left bold">Peter Danielsson</td>
-                                <td>A</td>
-                                    <td class="text-left">privateer</td>
-                                    <td>
-                                        <img src="./assets/cars/BMW.png" style="max-width:2em; max-height:2em;" alt="BMW" title="BMW"/>
-                                    </td>
-                            
-                            <td>
-                                DNF
-                            </td>
-                            
-                            <td>
-                                DNF
-                            </td>
-                            
-                            <td>
-                                DNS
-                            </td>
-                            
-                            <td>
-                                DNF
-                            </td>
-                            
-                            <td class="bold">0</td>
-                        </tr>
-                        <tr style="background-color: ">
-                            <td>44</td>
-                            <td>
-                                <span class="negative"><i
-                                        class="arrow down"></i>&nbsp;-1</span>
+                                <span class="neutral">=</span>
                             </td>
                             <td>
                                 <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
@@ -1721,13 +1848,53 @@
                                 DNS
                             </td>
                             
+                            <td>
+                                
+                            </td>
+                            
                             <td class="bold">0</td>
                         </tr>
                         <tr style="background-color: ">
                             <td>44</td>
                             <td>
-                                <span class="negative"><i
-                                        class="arrow down"></i>&nbsp;-1</span>
+                                <span class="neutral">=</span>
+                            </td>
+                            <td>
+                                <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
+                            </td>
+                            <td class="text-left bold">Peter Danielsson</td>
+                                <td>A</td>
+                                    <td class="text-left">privateer</td>
+                                    <td>
+                                        <img src="./assets/cars/BMW.png" style="max-width:2em; max-height:2em;" alt="BMW" title="BMW"/>
+                                    </td>
+                            
+                            <td>
+                                DNF
+                            </td>
+                            
+                            <td>
+                                DNF
+                            </td>
+                            
+                            <td>
+                                DNS
+                            </td>
+                            
+                            <td>
+                                DNF
+                            </td>
+                            
+                            <td>
+                                
+                            </td>
+                            
+                            <td class="bold">0</td>
+                        </tr>
+                        <tr style="background-color: ">
+                            <td>44</td>
+                            <td>
+                                <span class="neutral">=</span>
                             </td>
                             <td>
                                 <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
@@ -1755,13 +1922,53 @@
                                 DNS
                             </td>
                             
+                            <td>
+                                
+                            </td>
+                            
                             <td class="bold">0</td>
                         </tr>
                         <tr style="background-color: ">
                             <td>44</td>
                             <td>
-                                <span class="negative"><i
-                                        class="arrow down"></i>&nbsp;-1</span>
+                                <span class="neutral">=</span>
+                            </td>
+                            <td>
+                                <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
+                            </td>
+                            <td class="text-left bold">Jimmy Bengtsson</td>
+                                <td>A</td>
+                                    <td class="text-left">Kapow Racing Finland</td>
+                                    <td>
+                                        <img src="./assets/cars/peugot.png" style="max-width:2em; max-height:2em;" alt="peugot" title="peugot"/>
+                                    </td>
+                            
+                            <td>
+                                DNS
+                            </td>
+                            
+                            <td>
+                                DNS
+                            </td>
+                            
+                            <td>
+                                DNS
+                            </td>
+                            
+                            <td>
+                                DNF
+                            </td>
+                            
+                            <td>
+                                
+                            </td>
+                            
+                            <td class="bold">0</td>
+                        </tr>
+                        <tr style="background-color: ">
+                            <td>44</td>
+                            <td>
+                                <span class="neutral">=</span>
                             </td>
                             <td>
                                 <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
@@ -1789,13 +1996,16 @@
                                 DNS
                             </td>
                             
+                            <td>
+                                
+                            </td>
+                            
                             <td class="bold">0</td>
                         </tr>
                         <tr style="background-color: ">
                             <td>44</td>
                             <td>
-                                <span class="negative"><i
-                                        class="arrow down"></i>&nbsp;-1</span>
+                                <span class="neutral">=</span>
                             </td>
                             <td>
                                 <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
@@ -1823,13 +2033,16 @@
                                 DNS
                             </td>
                             
+                            <td>
+                                
+                            </td>
+                            
                             <td class="bold">0</td>
                         </tr>
                         <tr style="background-color: ">
                             <td>44</td>
                             <td>
-                                <span class="negative"><i
-                                        class="arrow down"></i>&nbsp;-1</span>
+                                <span class="neutral">=</span>
                             </td>
                             <td>
                                 <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
@@ -1857,13 +2070,16 @@
                                 DNS
                             </td>
                             
+                            <td>
+                                
+                            </td>
+                            
                             <td class="bold">0</td>
                         </tr>
                         <tr style="background-color: ">
                             <td>44</td>
                             <td>
-                                <span class="negative"><i
-                                        class="arrow down"></i>&nbsp;-1</span>
+                                <span class="neutral">=</span>
                             </td>
                             <td>
                                 <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
@@ -1891,13 +2107,16 @@
                                 DNS
                             </td>
                             
+                            <td>
+                                
+                            </td>
+                            
                             <td class="bold">0</td>
                         </tr>
                         <tr style="background-color: ">
                             <td>44</td>
                             <td>
-                                <span class="negative"><i
-                                        class="arrow down"></i>&nbsp;-1</span>
+                                <span class="neutral">=</span>
                             </td>
                             <td>
                                 <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
@@ -1925,13 +2144,16 @@
                                 DNS
                             </td>
                             
+                            <td>
+                                
+                            </td>
+                            
                             <td class="bold">0</td>
                         </tr>
                         <tr style="background-color: ">
                             <td>44</td>
                             <td>
-                                <span class="negative"><i
-                                        class="arrow down"></i>&nbsp;-1</span>
+                                <span class="neutral">=</span>
                             </td>
                             <td>
                                 <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
@@ -1959,13 +2181,16 @@
                                 DNS
                             </td>
                             
+                            <td>
+                                
+                            </td>
+                            
                             <td class="bold">0</td>
                         </tr>
                         <tr style="background-color: ">
                             <td>44</td>
                             <td>
-                                <span class="negative"><i
-                                        class="arrow down"></i>&nbsp;-1</span>
+                                <span class="neutral">=</span>
                             </td>
                             <td>
                                 <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
@@ -1993,13 +2218,16 @@
                                 DNS
                             </td>
                             
+                            <td>
+                                
+                            </td>
+                            
                             <td class="bold">0</td>
                         </tr>
                         <tr style="background-color: ">
                             <td>44</td>
                             <td>
-                                <span class="negative"><i
-                                        class="arrow down"></i>&nbsp;-1</span>
+                                <span class="neutral">=</span>
                             </td>
                             <td>
                                 <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
@@ -2027,13 +2255,16 @@
                                 DNS
                             </td>
                             
+                            <td>
+                                
+                            </td>
+                            
                             <td class="bold">0</td>
                         </tr>
                         <tr style="background-color: ">
                             <td>44</td>
                             <td>
-                                <span class="negative"><i
-                                        class="arrow down"></i>&nbsp;-1</span>
+                                <span class="neutral">=</span>
                             </td>
                             <td>
                                 <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
@@ -2061,13 +2292,16 @@
                                 DNS
                             </td>
                             
+                            <td>
+                                
+                            </td>
+                            
                             <td class="bold">0</td>
                         </tr>
                         <tr style="background-color: ">
                             <td>44</td>
                             <td>
-                                <span class="negative"><i
-                                        class="arrow down"></i>&nbsp;-1</span>
+                                <span class="neutral">=</span>
                             </td>
                             <td>
                                 <img src="./assets/country-flags/swe.png" style="max-width:1.5em; max-height:1.5em;" alt="swe" title="swe"/>
@@ -2095,13 +2329,17 @@
                                 DNS
                             </td>
                             
+                            <td>
+                                
+                            </td>
+                            
                             <td class="bold">0</td>
                         </tr>
                     </tbody>
 
                 </table>
                 <div style="margin:0 auto; text-align:center;">
-                    <p>Senast uppdaterad vid: 2022-12-08T12:26:18Z</p>
+                    <p>Senast uppdaterad vid: 2022-12-15T18:08:27Z</p>
                 </div>
             </div>
         </div>
